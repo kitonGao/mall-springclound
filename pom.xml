@@ -7,6 +7,14 @@
         <module>mall-mbg</module>
         <module>mall-common</module>
         <module>mall-security</module>
+        <module>mall-registry</module>
+        <module>mall-config</module>
+        <module>mall-gateway</module>
+        <module>mall-monitor</module>
+        <module>mall-admin</module>
+        <module>mall-search</module>
+        <module>mall-portal</module>
+        <module>mall-demo</module>
     </modules>
 
     <parent>

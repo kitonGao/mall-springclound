@@ -11,6 +11,7 @@
 
     <artifactId>mall-mbg</artifactId>
     <packaging>jar</packaging>
+    <description>MyBatisGenerator生成的数据库操作代码模块</description>
 
 
     <dependencies>

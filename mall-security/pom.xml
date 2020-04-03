@@ -11,6 +11,7 @@
 
     <artifactId>mall-security</artifactId>
     <packaging>jar</packaging>
+    <description>封装SpringSecurity+JWT的安全认证模块</description>
 
     <dependencies>
 

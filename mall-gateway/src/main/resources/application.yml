@@ -1,0 +1,26 @@
+server:
+  port: 8201
+spring:
+  application:
+    name: mall-gateway
+  profiles:
+    active: dev
+  cloud:
+    gateway:
+      discovery:
+        locator:
+          enabled: true   #开启从注册中心动态创建路由的功能
+          #使用小写service-id
+          lower-case-service-id: true    #使用小写服务名，默认为大写
+#开启SpringBoot Admin监控
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
+  endpoint:
+    health:
+      show-details: always
+logging:
+  level:
+    org.springframework.cloud.gateway: debug

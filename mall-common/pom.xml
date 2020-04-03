@@ -11,6 +11,7 @@
 
     <artifactId>mall-common</artifactId>
     <packaging>jar</packaging>
+    <description>工具类及通用代码模块</description>
 
 
     <dependencies>
