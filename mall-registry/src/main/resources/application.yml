@@ -9,6 +9,8 @@ eureka:
   instance:
     #指定主机地址
     hostname: localhost
+#    lease-renewal-interval-in-seconds: 30  #定义服务多久去注册中心续约
+#    lease-expiration-duration-in-seconds: 90 #定义服务多久不去续约认为服务失败
   client:
     #指定是否要从注册中心获取服务(注册中心不需要开启)
     fetch-registry: false

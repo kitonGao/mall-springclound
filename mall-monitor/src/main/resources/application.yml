@@ -1,0 +1,21 @@
+spring:
+  application:
+    name: mall-monitor
+  security:   #配置登录用户名和密码
+    user:
+      name: mall
+      password: mall
+  boot:   #不显示admin-server的监控信息
+    admin:
+      discovery:
+        ignored-services: ${spring.application.name}
+server:
+  port: 8181
+eureka:
+  client:
+#    enabled: true          #启用eureka客户端
+#    registry-fetch-interval-seconds:  30  #定义去eureka服务端获取服务列表的时间间隔
+    service-url:        #指定注册中心地址
+      defaultZone: http://localhost:8001/eureka
+    register-with-eureka: true    # 是否将自己注册到eureka服务端上去
+    fetch-registry: true          #是否获取eureka服务端上注册的服务列表
