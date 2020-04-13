@@ -4,6 +4,10 @@ import io.swagger.annotations.ApiModelProperty;
 import java.io.Serializable;
 
 public class UmsMemberReceiveAddress implements Serializable {
+
+    private static final long serialVersionUID = 1L;
+
+
     private Long id;
 
     private Long memberId;
@@ -31,7 +35,6 @@ public class UmsMemberReceiveAddress implements Serializable {
     @ApiModelProperty(value = "详细地址(街道)")
     private String detailAddress;
 
-    private static final long serialVersionUID = 1L;
 
     public Long getId() {
         return id;
