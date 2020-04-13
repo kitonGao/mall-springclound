@@ -1,0 +1,31 @@
+server:
+  port: 8301
+spring:
+  application:
+    name: mall-config
+  profiles:
+    active: native  #使用本地配置，要使用git存储改为git即可
+  cloud:
+    config:
+      server:
+        native:  #本地仓库存储
+          search-locations: classpath:/config/{application}
+        git:
+          #配置git仓库地址
+          uri: https://gitee.com/macrozheng/mall-config.git
+          #访问git仓库的用户名
+          username: macro
+          #方位git仓库的用户密码，如果git仓库为公共仓库，可以不填写用户名和密码，如果私有必须填写
+          password: 123456
+          #
+          clone-on-start: true
+          #获取配置信息 /{label}/{application}-{profile} 获取配置文件信息 /{label}/{application}-{profile}.yml
+          #占位符相关：
+            #application:代表应用名称，默认为配置文件中的spring.application.name，如果配置了spring.cloud.config.name，则为该名称
+            #label:代表分支名称，对应配置文件中的spring.cloud.config.label
+            #profile:代表环境名称，对应配置文件中的spring.cloud.config.profile
+          #支持带{application}和{profile}（{label}）如果需要占位符的搜索路径。  application表示uri下的对应的应用名称(客户端)下找配置文件
+          #{profile}表示uri下的对应的环境(客户端)下找配置文件
+          search-paths: '{application}'
+      #配置仓库的分支，可不配 默认为master
+#      label: master

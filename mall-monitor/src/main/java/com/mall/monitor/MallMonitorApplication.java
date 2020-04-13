@@ -11,8 +11,8 @@ import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
  * @author: gaojme
  * @create: 2020-04-10 17:32
  */
-@EnableDiscoveryClient
-@EnableAdminServer
+@EnableDiscoveryClient    //启用服务注册功能，注册到eureka
+@EnableAdminServer  //启用Spring-Boot-Admin的admin-server功能
 @SpringBootApplication
 public class MallMonitorApplication {
 

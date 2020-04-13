@@ -10,6 +10,12 @@
     <modelVersion>4.0.0</modelVersion>
 
     <artifactId>mall-monitor</artifactId>
+    <!--
+        Spring Boot Admin 可以对Spring Boot应用的各项指标进行监控，可以作为微服务架构中的监控中心来使用，本文将对其用法进行详细介绍
+
+        SpringBoot 应用可以通过Actuator来暴露应用运行过程中的各项指标，Spring Boot Admin通过这些指标来监控SpringBoot应用，然后通过图形化界面呈现
+            出来。Spring Boot Admin不仅可以监控单体应用，还可以和Spring Cloud 的注册中心相结合来监控微服务应用。
+    -->
     <description>基于Spring Boot Admin的微服务监控中心</description>
 
 
