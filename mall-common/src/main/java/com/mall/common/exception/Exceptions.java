@@ -8,7 +8,7 @@ import com.mall.common.api.IErrorCode;
  * @author: gaojme
  * @create: 2020-03-30 16:31
  */
-public class Aspects {
+public class Exceptions {
 
     public static void fail(String message){
         throw new ApiException(message);
